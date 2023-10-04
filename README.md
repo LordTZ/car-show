@@ -1,1 +1,1 @@
-# car-show
+This is a clone from JavaScript Mastery Youtube channel
