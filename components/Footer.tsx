@@ -18,12 +18,11 @@ const Footer = () => {
           width={120} height={20}
           className='onject-contain'
           />
-          <p className='text-sm'>
+          <p className='text-base text-gray-700'>
             CarHub 2023 <br />
             All rights reserved &copy;
           </p>
         </div>
-      </div>
 
         <div className='footer__links'>
           {footerLinks.map((link) => (
@@ -36,7 +35,7 @@ const Footer = () => {
                 <Link 
                   key={item.title} 
                   href={item.url}
-                  className='text-gray-500'
+                  className='text-grey-500'
                 >
                   {item.title}
                 </Link>
@@ -44,17 +43,18 @@ const Footer = () => {
             </div>
           ))}
         </div>
+      </div>
 
         <div className='flex justify-between items-center
         flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6
         py-10'>
-
           <p>@2023 CarHub. All Right Reserved </p>
+
           <div className='footer__copyrights-link'>
-            <Link href='/' className='text-gray-500'>
+            <Link href='/' className='text-grey-500'>
               Privacy Policy
             </Link>
-            <Link href='/' className='text-gray-500'>
+            <Link href='/' className='text-grey-500'>
               Term of Use
             </Link>
           </div>

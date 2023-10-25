@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { SearchManuFacturerProps } from '@/types'
 import { Combobox, Transition } from '@headlessui/react'
 import { manufacturers } from '@/constants';
-import React from 'react'
 
 const SearchManuFacturer = ({ manufacturer, 
   setManufacturer} : SearchManuFacturerProps) => {
@@ -15,12 +14,13 @@ const SearchManuFacturer = ({ manufacturer,
 
     const filteredManufacturers = 
     query === '' 
-    ? manufacturers 
-    : manufacturers.filter((item:string) => (
-      item.toLowerCase()
-      .replace(/\s+/g, '')
-      .includes(query.toLowerCase().replace(/\s+/g, '')
-      )))
+      ? manufacturers 
+      : manufacturers.filter((item:string) => 
+        item
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .includes(query.toLowerCase().replace(/\s+/g, '')
+        ))
 
   return (
     <div className='search-manufacturer'>
@@ -58,7 +58,7 @@ const SearchManuFacturer = ({ manufacturer,
                     key={item}
                     className={({ active }) =>`
                     relative search-manufacturer__option
-                    ${active ? 'bg-primary-blue text-white' :'text-gray-900'}
+                    ${active ? 'bg-primary-blue text-white' :'text-grey-900'}
                     `}
                     value={item}
                   >
